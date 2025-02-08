@@ -8,8 +8,8 @@ export type TLocation = {
   url: string;
 }
 
-export type TCharacter = {
-  id: string;
+export type TCharacterPreview = {
+  id: number;
   name: string;
   status: string;
   species: string;
@@ -22,5 +22,3 @@ export type TCharacter = {
   url: string;
   created: string;
 }
-
-export type TCharacterPreviewCard = Pick<TCharacter, 'id' | 'name' | 'status' | 'created'>;
