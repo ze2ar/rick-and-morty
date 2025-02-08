@@ -45,19 +45,19 @@
 }
 
 .preview-card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 2rem;
+    box-sizing: border-box;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
     width: 100%;
     min-width: 280px;
-    background-color: #ffffff;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    padding: 1rem;
-    box-sizing: border-box;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    overflow: hidden;
 }
 
 .preview-card:hover {
@@ -65,36 +65,115 @@
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 
-.preview-card__header {
-    margin-bottom: 2rem;
-    padding: 1rem;
+.preview-card__image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    margin-top: -16px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
 }
 
-.preview-card__bottom {
-    display: flex;
-    flex-direction: row !important;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem
+.preview-card__header {
+    padding: 1rem;
+    background-color: #A9A9A9;
 }
 
 .preview-card__header-name {
     font-size: 1.5rem;
     font-weight: bold;
     color: #333333;
-    margin-bottom: 0.5rem;
-    letter-spacing: 1px;
-    text-align: left;
+    margin: 0;
 }
 
-.preview-card__bottom-created {
-    font-size: 0.9rem;
-    color: gray;
-    text-align: right;
-    margin-top: auto;
+.preview-card__details {
+    padding: 1rem;
+}
+
+.preview-card__detail {
+    color: #555555;
+    margin-bottom: 0.5rem;
+}
+
+.preview-card__detail strong {
+    font-weight: bold;
+    color: #333333;
+}
+
+.preview-card__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #A9A9A9;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
 }
 
 .preview-card__bottom-status {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.preview-card__bottom-created {
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+.preview-card__episodes-container {
+    background-color: #D3D3D3;
+    overflow: hidden;
+    padding: .5rem;
+}
+
+.preview-card__link {
+    word-break: break-word;
+}
+
+.preview-card__link a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.preview-card__link a:hover {
+    text-decoration: underline;
+}
+
+.preview-card__episodes-header {
     font-size: 1rem;
     font-weight: bold;
+}
+
+/* Episodes */
+.character-episode {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    margin: .5rem;
+    justify-content: center;
+}
+
+.character-episode__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 1rem;
+    min-height: 1rem;
+    padding: 0.5rem;
+    background-color: #4a4a4a;
+    color: #ffffff;
+    font-size: 0.875rem;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.character-episode__item:hover {
+    background-color: #9b9b9b;
+}
+
+.character-episode__item-more {
+    cursor: pointer;
 }

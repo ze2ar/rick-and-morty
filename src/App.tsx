@@ -5,14 +5,8 @@ function App() {
   return (
     <>
       <div className={'preview-card-container'}>
-        {charactersPreview.map((card) => (
-          <CharacterPreviewCard
-            key={card.id}
-            id={card.id}
-            name={card.name}
-            status={card.status}
-            created={card.created}
-          />
+        {charactersPreview.map((character) => (
+          <CharacterPreviewCard key={character.id} character={character} />
         ))}
       </div>
     </>
