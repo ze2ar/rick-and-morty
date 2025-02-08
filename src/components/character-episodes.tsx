@@ -18,10 +18,12 @@ function CharacterEpisodes({
 
   return (
     <div className='character-episode'>
-      {visibleEpisodes.map((_, index) => (
-        <span key={index} className='character-episode__item'>
-          {showEpisodeLabel ? `Episode ${index + 1}` : index + 1}{' '}
-        </span>
+      {visibleEpisodes.map((episode, index) => (
+        <a href={episode} target='_blank' rel='noopener noreferrer'>
+          <span key={index} className='character-episode__item'>
+            {showEpisodeLabel ? `Episode ${index + 1}` : index + 1}{' '}
+          </span>
+        </a>
       ))}
       {hasMore && (
         <span className='character-episode__item character-episode__item-more'>
