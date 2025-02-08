@@ -97,4 +97,36 @@
 .preview-card__bottom-status {
     font-size: 1rem;
     font-weight: bold;
+/* Episodes */
+.character-episode {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    margin: .5rem;
+    justify-content: center;
+}
+
+.character-episode__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 1rem;
+    min-height: 1rem;
+    padding: 0.5rem;
+    background-color: #4a4a4a;
+    color: #ffffff;
+    font-size: 0.875rem;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.character-episode__item:hover {
+    background-color: #9b9b9b;
+}
+
+.character-episode__item-more {
+    cursor: pointer;
 }
