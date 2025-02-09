@@ -1,16 +1,7 @@
-import { CharacterPreviewCard } from './components';
-import { charactersPreview } from './mocks';
+import { CharacterSearchPage } from './pages';
 
 function App() {
-  return (
-    <>
-      <div className={'preview-card-container'}>
-        {charactersPreview.map((character) => (
-          <CharacterPreviewCard key={character.id} character={character} />
-        ))}
-      </div>
-    </>
-  );
+  return <CharacterSearchPage />;
 }
 
 export default App;
