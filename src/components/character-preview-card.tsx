@@ -24,7 +24,7 @@ function CharacterPreviewCard({
         <div className='preview-card__header-name'>{character.name}</div>
       </div>
 
-      // TODO Body toggle
+      {/* //TODO Body toggle */}
       <div className='preview-card__body'>
         <div className='preview-card__details'>
           <div className='preview-card__detail'>

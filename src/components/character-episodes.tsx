@@ -19,8 +19,8 @@ function CharacterEpisodes({
   return (
     <div className='character-episode'>
       {visibleEpisodes.map((episode, index) => (
-        <a href={episode} target='_blank' rel='noopener noreferrer'>
-          <span key={index} className='character-episode__item'>
+        <a key={index} href={episode} target='_blank' rel='noopener noreferrer'>
+          <span className='character-episode__item'>
             {showEpisodeLabel ? `Episode ${index + 1}` : index + 1}{' '}
           </span>
         </a>
