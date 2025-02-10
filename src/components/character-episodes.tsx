@@ -8,7 +8,7 @@ type TCharacterEpisodes = {
 
 function CharacterEpisodes({
   episodes,
-  maxVisibleEpisodes = 5,
+  maxVisibleEpisodes = episodes.length,
   showEpisodeLabel = false
 }: TCharacterEpisodes): React.ReactNode {
   if (!episodes || episodes.length === 0) return null;

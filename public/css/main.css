@@ -192,6 +192,15 @@
     cursor: pointer;
 }
 
+@media (max-width: 768px) {
+    .character-episode__item {
+        min-width: .7rem;
+        min-height: .7rem;
+        font-size: .7rem;
+        padding: .3rem;
+    }
+}
+
 /* Search bar */
 .search-bar-container {
     position: fixed;
