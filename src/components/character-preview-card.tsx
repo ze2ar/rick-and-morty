@@ -15,9 +15,9 @@ function CharacterPreviewCard({
   return (
     <div className='preview-card'>
       <img
+        className='preview-card__image'
         src={character.image}
         alt={character.name}
-        className='preview-card__image'
       />
 
       <div className='preview-card__header'>
@@ -61,7 +61,10 @@ function CharacterPreviewCard({
         <div className='preview-card__episodes-container'>
           <div className='preview-card__episodes-header'>Episodes</div>
           <div className='preview-card__episodes'>
-            <CharacterEpisodes episodes={character.episode} />
+            <CharacterEpisodes
+              episodes={character.episode}
+              maxVisibleEpisodes={5}
+            />
           </div>
         </div>
       </div>
