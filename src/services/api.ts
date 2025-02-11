@@ -3,7 +3,7 @@ import axios, { AxiosInstance } from 'axios';
 
 export const createAPI = (): AxiosInstance => {
   return axios.create({
-    baseURL: 'https://rickandmortyapi.com/api',
+    baseURL: import.meta.env.VITE_BACKEND_URL,
     timeout: 5000,
   });
 };

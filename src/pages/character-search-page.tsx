@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import {
   CharacterPreviewCard,
@@ -45,7 +46,9 @@ function CharacterSearchPage() {
       {error && <p className='error-message'>{error}</p>}
       <div className='preview-card-container' style={{ minHeight: '200px' }}>
         {charactersPreview.map((character) => (
-          <CharacterPreviewCard key={character.id} character={character} />
+          <Link to={`/character/${character.id}`}>
+            <CharacterPreviewCard key={character.id} character={character} />
+          </Link>
         ))}
       </div>
     </div>
