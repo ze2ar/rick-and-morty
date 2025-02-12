@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 
 import { TCharacter } from '../types';
 import { fetchCharacterById } from '../services';
 import { CharacterCard, LoadingSpinner } from '../components';
 
 function CharacterPage() {
-  const id = 1;
+  const { id } = useParams();
   const [character, setCharacter] = useState<TCharacter | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
